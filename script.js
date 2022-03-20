@@ -1,4 +1,4 @@
-var buttonEnter = document.getElementById("enter");
+// var buttonEnter = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var list = document.getElementsByClassName("shopping-list")[0];
 
@@ -34,11 +34,11 @@ function deleteItem(event) {
 	event.target.parentNode.parentNode.removeChild(event.target.parentNode);
 }
 
-function addListAfterClick() {
-	if (inputLength() > 0) {
-		createListElement();
-	}
-}
+// function addListAfterClick() {
+// 	if (inputLength() > 0) {
+// 		createListElement();
+// 	}
+// }
 
 function addListAfterKeypress(event) {
 	if (inputLength() > 0 && event.keyCode === 13) {
@@ -55,6 +55,6 @@ for (var i=0; i < listLength; i++) {
 	button.addEventListener("click", deleteItem);
 }
 
-buttonEnter.addEventListener("click", addListAfterClick);
+// buttonEnter.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
